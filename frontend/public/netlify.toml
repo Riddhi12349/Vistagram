@@ -1,0 +1,5 @@
+[build]
+  command = "CI=false npm run build"
+
+[secrets]
+  omit_keys = ["REACT_APP_BASE_URL"]
