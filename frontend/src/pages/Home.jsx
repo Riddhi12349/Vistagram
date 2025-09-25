@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
   const fetchPosts = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/get/all/posts/${userId}`);
+      const res = await axios.get(`${BASE_URL}/get/all/posts/${userId}`);
       const data = res.data;
       
       const sortedData = data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
@@ -61,7 +61,7 @@ const Home = () => {
       
       console.log(form);
 
-      const res =  await axios.post(`http://localhost:8000/send/new/post/${newPost.user_id}/${newPost.id}`,
+      const res =  await axios.post(`${BASE_URL}/send/new/post/${newPost.user_id}/${newPost.id}`,
         form
       );
         
@@ -95,7 +95,7 @@ const Home = () => {
 
     try {
       
-      await axios.patch(`http://localhost:8000/send/likes/count/${id}` , {
+      await axios.patch(`${BASE_URL}/send/likes/count/${id}` , {
          newLikeCount , newLikedState
       })
       console.log("Liked----" , id , newLikeCount , newLikedState);
@@ -130,7 +130,7 @@ const Home = () => {
     );
 
     try {
-        await axios.patch(`http://localhost:8000/send/shares/count/${postId}`  ,{ newShareCount});
+        await axios.patch(`${BASE_URL}/send/shares/count/${postId}`  ,{ newShareCount});
         console.log("Shared" , postId , newShareCount);
     } catch (err) {
     console.log("Failed to share");

@@ -41,7 +41,7 @@ const CaptureModal = ({ isOpen, onClose, onSubmit }) => {
     formData.append("image", selectedImage); // raw file
 
     const res = await axios.post(
-      "http://localhost:8000/api/ai/analyze/image",
+      `${BASE_URL}/api/ai/analyze/image`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
