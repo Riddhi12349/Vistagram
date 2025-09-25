@@ -112,21 +112,6 @@ Start frontend ✨:
 npm start
 ```
 
-## 🌐 Deployment Notes 🚢
-
-**Frontend (Netlify) 🌟:** `_redirects` file in `public/`:
-```
-/* /index.html 200
-```
-
-**Backend (Render) ⚙️:** Serve static uploads:
-```javascript
-app.use('/uploads', express.static('uploads'));
-```
-
-💡 For persistence, use S3 or Cloudinary for uploaded files.
-🔧 Set all environment variables in platform dashboards.
-
 ## 📝 API Overview 🔗
 
 | Endpoint | Method | Description |
