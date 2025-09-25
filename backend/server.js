@@ -12,6 +12,8 @@ import fs from "fs";
 
 dotenv.config();
 
+const BASE_URL = process.env.BASE_URL || "http://localhost:8000";
+
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -126,7 +128,7 @@ app.post("/send/new/post/:userId/:postId",
       const userRedisKey = `user-${userId}:posts_id`;
       const postsRedisKey = `post_id-${postId}:post`;
 
-      const imageUrl = `http://localhost:${process.env.PORT}/uploads/${req.file.filename}`;
+      const imageUrl = `${BASE_URL}/uploads/${req.file.filename}`;
 
       const imageUploadUrl = req.file ? imageUrl : req.body.imageUrl;
 
