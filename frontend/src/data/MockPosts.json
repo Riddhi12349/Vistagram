@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "user_id" : "riddhi",
+    "username": "riddhi_g",
+    "caption": "Exploring the mountains 🌄",
+    "imageUrl": "https://picsum.photos/400/300?random=1",
+    "timestamp": "2024-09-10T14:32:00Z",
+    "likes": 120,
+    "shares": 15,
+    "isLiked": "true"
+  },
+  {
+    "id": 2,
+    "user_id" : "riddhi",
+    "username": "techie_101",
+    "caption": "Debugging late night 💻☕",
+    "imageUrl": "https://picsum.photos/400/300?random=2",
+    "timestamp": "2024-08-25T22:18:00Z",
+    "likes": 98,
+    "shares": 12,
+    "isLiked": "false"
+  },
+  {
+    "id": 3,
+    "user_id" : "riddhi",
+    "username": "wanderlust",
+    "caption": "Sunset at the beach 🏖️",
+    "imageUrl": "https://picsum.photos/400/300?random=3",
+    "timestamp": "2024-07-03T18:45:00Z",
+    "likes": 250,
+    "shares": 30,
+    "isLiked": "true"
+  },
+  {
+    "id": 4,
+    "user_id" : "riddhi",
+    "username": "foodie",
+    "caption": "Homemade pasta night 🍝",
+    "imageUrl": "https://picsum.photos/400/300?random=4",
+    "timestamp": "2024-10-01T12:10:00Z",
+    "likes": 180,
+    "shares": 25,
+    "isLiked": "false"
+  },
+  {
+    "id": 5,
+    "user_id" : "riddhi",
+    "username": "coder_girl",
+    "caption": "Finally deployed my app! 🚀",
+    "imageUrl": "https://picsum.photos/400/300?random=5",
+    "timestamp": "2024-06-18T09:30:00Z",
+    "likes": 220,
+    "shares": 40,
+    "isLiked": "true"
+  },
+  {
+    "id": 6,
+    "user_id" : "riddhi",
+    "username": "nature_love",
+    "caption": "Morning hike through the forest 🌲",
+    "imageUrl": "https://picsum.photos/400/300?random=6",
+    "timestamp": "2024-05-12T07:50:00Z",
+    "likes": 130,
+    "shares": 18,
+    "isLiked": "false"
+  },
+  {
+    "id": 7,
+    "user_id" : "riddhi",
+    "username": "artist_vibes",
+    "caption": "Finished my latest painting 🎨",
+    "imageUrl": "https://picsum.photos/400/300?random=7",
+    "timestamp": "2024-09-28T16:00:00Z",
+    "likes": 300,
+    "shares": 55,
+    "isLiked": "true"
+  },
+  {
+    "id": 8,
+    "user_id" : "riddhi",
+    "username": "sportsfan",
+    "caption": "Game day excitement! ⚽🔥",
+    "imageUrl": "https://picsum.photos/400/300?random=8",
+    "timestamp": "2024-08-15T19:20:00Z",
+    "likes": 175,
+    "shares": 22,
+    "isLiked": "false"
+  },
+  {
+    "id": 9,
+    "user_id" : "riddhi",
+    "username": "bookworm",
+    "caption": "Lost in a fantasy world 📚✨",
+    "imageUrl": "https://picsum.photos/400/300?random=9",
+    "timestamp": "2024-07-27T21:05:00Z",
+    "likes": 145,
+    "shares": 20,
+    "isLiked": "true"
+  },
+  {
+    "id": 10,
+    "user_id" : "riddhi",
+    "username": "traveler",
+    "caption": "Road trip adventures 🚗🛣️",
+    "imageUrl": "https://picsum.photos/400/300?random=10",
+    "timestamp": "2024-09-05T11:15:00Z",
+    "likes": 210,
+    "shares": 28,
+    "isLiked": "false"
+  }
+]
