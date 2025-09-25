@@ -23,6 +23,8 @@ const CaptureModal = ({ isOpen, onClose, onSubmit }) => {
   const canvasRef = useRef(null);
   const [isWebcamActive, setIsWebcamActive] = useState(false);
 
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   // Detect mobile
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 

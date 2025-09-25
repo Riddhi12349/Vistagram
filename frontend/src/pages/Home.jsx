@@ -14,6 +14,8 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [userId , setUserId] = useState("riddhi");
 
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   useEffect(() => {
   const fetchPosts = async () => {
     try {
