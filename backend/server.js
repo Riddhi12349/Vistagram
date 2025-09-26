@@ -10,30 +10,52 @@ import dotenv from "dotenv";
 import { extractTextFromImage, checkIsValidText } from "./ApiReq.js";
 import fs from "fs";
 
+import { v2 as cloudinary } from 'cloudinary';
+
 dotenv.config();
+
+const upload = multer({ storage  : multer.memoryStorage()});
+
+const CLOUDINARY_URL='cloudinary://571416742376674:**********@ddwggceng'
+
+
+cloudinary.config({
+    cloud_name : 'ddwggceng' ,
+    api_key : '571416742376674',
+    api_secret :  'urxYi0QnwkCPJTDUY_rFhs_LKms'    
+  });
+
+
+const UploadImage = (fileBuffer, imgName) => {
+  return new Promise((resolve, reject) => {
+    cloudinary.uploader.upload_stream(
+      { public_id: imgName, resource_type: "image" },
+      (error, uploadResult) => {
+        if (error) {
+          console.error("Cloudinary upload failed:", error);
+          return reject(error);
+        }
+        console.log(`Buffer upload_stream success - ${uploadResult.public_id}`);
+        resolve(uploadResult);  // ✅ resolve the result
+      }
+    ).end(fileBuffer);  // raw buffer from multer
+  });
+};
+
+
+
 
 const BASE_URL = process.env.BASE_URL || "http://localhost:8000";
 
+// const BASE_URL = "http://localhost:8000";
+
 const app = express();
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 app.use(express.json());
 app.use(cors());
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api", apiRoutes);
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads/");
-  },
-  filename: (req, file, cb) => {
-    const prefix = Date.now();
-    cb(null, prefix + "-" + file.originalname);
-  },
-});
 
-const upload = multer({ storage });
 
 const client = createClient({ url: process.env.REDIS_CLIENT_URL });
 
@@ -61,6 +83,7 @@ const postModel = new mongoose.model("postModel", postSchema);
 mongoose.connect(process.env.MONGO_URL).then(() => {
   console.log("MongoDB connected!!");
 });
+
 
 app.get("/get/all/posts/:userId", async (req, res) => {
   try {
@@ -109,29 +132,30 @@ app.get("/get/all/posts/:userId", async (req, res) => {
   }
 });
 
-app.post("/send/new/post/:userId/:postId",
-  upload.single("image"),
-  async (req, res) => {
+app.post("/send/new/post/:userId/:postId", upload.single("image"), async (req, res) => {
     try {
       const { userId, postId } = req.params;
       const { username, caption, timestamp } = req.body;
    
-      const fileBase64 = fs.readFileSync(req.file.path, { encoding: "base64" });
+      const fileBase64 = req.file.buffer.toString("base64")
       const imgDescr = await extractTextFromImage(fileBase64);
 
       const isInvalid = checkIsValidText(imgDescr);
 
       if (isInvalid) {
-        return res.send({ message: "Inappropriate Image , Cannot be saved to DB.ser" });
+        return res.send({ message: "Inappropriate Image , Cannot be saved to DB" });
       }
 
       const userRedisKey = `user-${userId}:posts_id`;
       const postsRedisKey = `post_id-${postId}:post`;
 
-      const imageUrl = `${BASE_URL}/uploads/${req.file.filename}`;
+      //UPLOADING AT CLOUDIFY , OUR IMAGE , AND GETTING THE URL OF  UPLOADED IMAGE
+      const imageUrl =  await UploadImage(req.file.buffer , `${Date.now()}-${req.file.originalname}`);
+       
+      // console.log("imageUrl : " , imageUrl);
 
-      const imageUploadUrl = req.file ? imageUrl : req.body.imageUrl;
-
+      const imageUploadUrl = req.file ? imageUrl.url : req.body.imageUrl;
+     
       await client.rPush(userRedisKey, postId);
       await client.hSet(postsRedisKey, {
         id: postId,
