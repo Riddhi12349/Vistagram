@@ -71,7 +71,7 @@ uploads/           # Multer uploads (temporary)
 ### 1️⃣ Clone the repository 📥
 
 ```bash
-git clone https://github.com/your-username/vistagram.git
+git clone https://github.com/username/vistagram.git
 cd vistagram
 ```
 
@@ -86,11 +86,11 @@ Create `.env` 📝:
 
 ```env
 PORT=5000
-BASE_URL=https://your-backend-render-url.com
-MONGO_URL=your-mongodb-uri
-REDIS_CLIENT_URL=your-redis-url
-JWT_SECRET=your-secret-key
-GEMINI_API_KEY=your-google-gemini-api-key
+BASE_URL=https://backend-render-url.com
+MONGO_URL=mongodb-uri
+REDIS_CLIENT_URL=redis-url
+JWT_SECRET=secret-key
+GEMINI_API_KEY=google-gemini-api-key
 ```
 
 Start backend 🚀:
@@ -109,7 +109,7 @@ npm install
 Create `.env` 📝:
 
 ```env
-REACT_APP_BASE_URL=https://your-backend-render-url.com
+REACT_APP_BASE_URL=https://backend-render-url.com
 ```
 
 Start frontend ✨:
