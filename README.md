@@ -4,9 +4,16 @@ A social media platform for sharing moments through images and captions, enhance
 
 ## 🎥 Demo Video
 
+
 <a href="https://www.youtube.com/watch?v=W7keZkfFyKc" target="_blank">
-  <img src="https://img.youtube.com/vi/W7keZkfFyKc/0.jpg" width="800" />
+  <img src="https://img.youtube.com/vi/W7keZkfFyKc/0.jpg" width="700" alt="Vistagram Demo Video"/>
 </a>
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=W7keZkfFyKc" target="_blank">
+    <img src="https://img.icons8.com/color/96/000000/youtube-play.png" alt="Play on YouTube"/>
+  </a>
+</p>
 
 > 📹 **See Vistagram in action!** Watch our demo showcasing AI caption generation, real-time interactions, and seamless image sharing.
 
