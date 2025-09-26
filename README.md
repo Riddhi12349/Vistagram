@@ -1,6 +1,6 @@
 # 📸 Vistagram - AI-Powered Social Media Platform 🚀
 
-A social media platform for sharing moments through images and captions, enhanced with AI-powered features like automatic caption generation, hashtag suggestions, and content moderation. Built with ReactJS, NodeJS, Express, MongoDB, and Redis.
+A social media platform for sharing moments through images and captions, enhanced with AI-powered features like automatic caption generation, hashtag suggestions, and content moderation. Built with ReactJS, NodeJS, Express, MongoDB, Redis and Cloudinary .
 
 ## 🎥 Demo Video
 
@@ -28,6 +28,7 @@ A social media platform for sharing moments through images and captions, enhance
 ### Database & Caching 🗄️
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
 
 ### AI & Machine Learning 🤖
 ![Google Gemini](https://img.shields.io/badge/Google%20Gemini%202.5%20Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
@@ -43,7 +44,8 @@ A social media platform for sharing moments through images and captions, enhance
 - 🛡️ **Content Moderation**: AI-powered inappropriate content detection
 - ⚡ **Real-time Interactions**: Like and share posts with Redis caching
 - 📷 **Image Sharing**: Upload and share images with captions
-
+- ☁️ **Cloud storage** for persistent uploads using Cloudinary
+  
 ## 📁 Project Structure
 
 ```
@@ -246,12 +248,12 @@ function cleanCaptions(rawText) {
 
 ## 💡 Best Practices ✨
 
-- 📦 Multer is fine for development, but can use cloud storage (S3/Cloudinary) in production
+- 📦 Using cloud storage (S3/Cloudinary) in production for storing images at cloud platform.
 - ⚡ Redis caching improves performance for feed, likes, and shares  
 
 ## ⚡ Future Improvements 🚀
 
-- ☁️ Cloud storage for persistent uploads (AWS S3 / Cloudinary)
+
 - 🔐 JWT authentication & secure user accounts
 - 🔔 Real-time notifications with Socket.io
 - 🎯 Advanced AI-powered content recommendations
