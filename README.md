@@ -4,7 +4,8 @@ A social media platform for sharing moments through images and captions, enhance
 
 ## 🎥 Demo Video
 
-[![Vistagram Demo](https://img.shields.io/badge/▶️%20Watch%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/your-demo-video-link)
+
+[![Vistagram Demo](https://www.youtube.com/watch?v=W7keZkfFyKc)]
 
 > 📹 **See Vistagram in action!** Watch our demo showcasing AI caption generation, real-time interactions, and seamless image sharing.
 
