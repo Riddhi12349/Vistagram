@@ -5,12 +5,13 @@ A social media platform for sharing moments through images and captions, enhance
 ## 🎥 Demo Video
 
 
+## 🎥 Project Demo
+
+
+
 <a href="https://www.youtube.com/watch?v=W7keZkfFyKc" target="_blank">
-  <img src="https://img.youtube.com/vi/W7keZkfFyKc/0.jpg" width="700" alt="Vistagram Demo Video"/>
+  <img width="956" height="624" alt="image" src="https://github.com/user-attachments/assets/50647990-4ebe-43a9-8cf3-824d60376878" /> 
 </a>
-
-
-[![Watch the demo](https://img.youtube.com/vi/W7keZkfFyKc/maxresdefault.jpg)](https://www.youtube.com/watch?v=W7keZkfFyKc)
 
 > 📹 **See Vistagram in action!** Watch our demo showcasing AI caption generation, real-time interactions, and seamless image sharing.
 
