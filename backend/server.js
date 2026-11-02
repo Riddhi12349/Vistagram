@@ -55,7 +55,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/api", apiRoutes);
 
-
+const cores = require('cors');
 
 const client = createClient({ url: process.env.REDIS_CLIENT_URL });
 
