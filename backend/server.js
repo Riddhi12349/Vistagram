@@ -9,7 +9,7 @@ import apiRoutes from "./ApiReq.js";
 import dotenv from "dotenv";
 import { extractTextFromImage, checkIsValidText } from "./ApiReq.js";
 import fs from "fs";
-
+import cors from cors;
 import { v2 as cloudinary } from 'cloudinary';
 
 dotenv.config();
