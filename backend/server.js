@@ -52,10 +52,11 @@ const BASE_URL = process.env.BASE_URL || "http://localhost:8000";
 const app = express();
 
 app.use(express.json());
+const cors = require('cors');
 app.use(cors());
 app.use("/api", apiRoutes);
 
-const cores = require('cors');
+
 
 const client = createClient({ url: process.env.REDIS_CLIENT_URL });
 
